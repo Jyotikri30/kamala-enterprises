@@ -1,0 +1,68 @@
+/* ==========================================================================
+   Kamala Interprises — Animation Keyframes
+   ========================================================================== */
+
+@keyframes heroLine {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-30px, 30px) scale(1.05); }
+}
+
+@keyframes floatMed {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+
+@keyframes particleFloat {
+  0% { transform: translateY(0) translateX(0); opacity: 0; }
+  10% { opacity: 0.4; }
+  90% { opacity: 0.4; }
+  100% { transform: translateY(-600px) translateX(40px); opacity: 0; }
+}
+
+@keyframes scrollDot {
+  0% { top: 6px; opacity: 1; }
+  100% { top: 20px; opacity: 0; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fabPulse {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(1.7); opacity: 0; }
+}
+
+@keyframes staggerIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes countUp {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #EFF3FA 25%, #E1E9F6 37%, #EFF3FA 63%);
+  background-size: 400px 100%;
+  animation: shimmer 1.6s ease-in-out infinite;
+}
+
+/* Page transition overlay (used briefly on nav clicks) */
+@keyframes pageFade {
+  from { opacity: 1; } to { opacity: 0; }
+}
+
+/* Hover tilt utility */
+.tilt { transition: transform .4s var(--ease); }
+.tilt:hover { transform: perspective(800px) rotateX(3deg) rotateY(-3deg) translateY(-6px); }
